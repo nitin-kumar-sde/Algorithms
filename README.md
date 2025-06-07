@@ -1,6 +1,6 @@
 # 📦 mystl Algorithms – lightweight C++ Algorithms library
 
-🚀 A lightweight, header-only C++ algorithm library that mimics STL-style `sort()` , `accumulate` , `reverse` , `copy` and other important algorithms.
+🚀 A lightweight, header-only C++ algorithm library that mimics STL-style `sort()` , `accumulate` , `reverse` and other important algorithms.
 
 ---
 
@@ -36,14 +36,26 @@ cd sorting
 ```
 
 ```
-sorting/
+algorithms/
 ├── sort/
-│   ├── insertion_sort.hpp
-│   ├── merge_sort.hpp
-│   ├── quick_sort.hpp
 │   └── sort.hpp
+├── accumulate/
+│   └── accumulate.hpp
+├── count/
+│   └── count.hpp
+├── find/
+│   └── find.hpp
+├── for_each/
+│   └── for_each.hpp
+├── max_min/
+│   └── max_min_element.hpp
+├── reverse/
+│   └── reverse.hpp
+├── algo/
+│   └── algos.hpp   <-- include this to get all utilities
 ├── demo.cpp
 └── README.md
+
 
 ```
 
@@ -106,7 +118,94 @@ The following decision is made internally based on input size n:
 
 ---
 
-## Accumulate 
+## ➕ Accumulate
+
+```
+#include "algo/algo.hpp"
+
+....
+
+std::vector<int> v = {1, 2, 3};
+int sum = mystl::accumulate(v.begin(), v.end(), 0); 
+
+// Custom operation
+int prod = accumulate(v.begin(), v.end(), 1, [](int a, int b) { return a * b; });
+
+```
+
+---
+
+## 🔄 Reverse
+
+```
+#include "algo/algo.hpp"
+
+reverse(v.begin(), v.end());
+
+```
+
+---
+
+## 🔍 Find and Find If
+
+```
+#include "algo/algo.hpp"
+
+auto it = find(v.begin(), v.end(), 5);
+auto it2 = find_if(v.begin(), v.end(), [](int x){ return x > 3; });
+
+```
+---
+
+## 🔢 Count and Count If
+
+```
+#include "algo/algo.hpp"
+
+...
+
+int cnt = count(v.begin(), v.end(), 2);
+int even = count_if(v.begin(), v.end(), [](int x){ return x % 2 == 0; });
+```
+---
+
+## ✅ all_of, any_of, none_of
+
+```
+#include "algo/algo.hpp"
+
+...
+
+bool allPos = all_of(v.begin(), v.end(), [](int x){ return x > 0; });
+bool hasZero = any_of(v.begin(), v.end(), [](int x){ return x == 0; });
+bool noneNeg = none_of(v.begin(), v.end(), [](int x){ return x < 0; });
+```
+---
+
+## 🧲 Min Element & Max Element
+
+```
+#include "algo/algo.hpp"
+
+...
+
+auto minIt = min_element(v.begin(), v.end());
+auto maxIt = max_element(v.begin(), v.end());
+```
+
+---
+
+## ♻️ For Each
+
+```
+#include "algo/algo.hpp"
+
+...
+
+for_each(v.begin(), v.end(), [](int& x){ x++; });
+```
+
+---
 
 ## 🔨 Requirements
 
