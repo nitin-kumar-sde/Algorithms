@@ -1,10 +1,12 @@
-# 📦 mystl sort – lightweight C++ sorting library
+# 📦 mystl Algorithms – lightweight C++ Algorithms library
 
-🚀 A lightweight, header-only C++ sorting library that mimics STL-style `sort()` but allows you to choose or automatically select the best sorting algorithm based on input size.
+🚀 A lightweight, header-only C++ algorithm library that mimics STL-style `sort()` , `accumulate` , `reverse` , `copy` and other important algorithms.
 
+---
 
 ## 📚 Features
 
+### Sort 
 - ✅ STL-like Interface – drop-in replacement with familiar syntax.
 - 🧠 Smart Algorithm Selection – auto selects the best sort algo based on input
 - 💼 Custom Comparator Support
@@ -13,7 +15,7 @@
 
 ---
 
-## 🧰 Algorithms Implemented
+### 🧰 Algorithms Implemented
 
 | Algorithm       | Class             | Best Use Case              |
 |-----------------|-------------------|-----------------------------|
@@ -103,6 +105,8 @@ The following decision is made internally based on input size n:
 
 
 ---
+
+## Accumulate 
 
 ## 🔨 Requirements
 
