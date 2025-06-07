@@ -1,4 +1,14 @@
 1 2 5 5 6 9 
+9 6 5 5 2 1 
+Sum = 28
+Count of 5 = 2
+Found 9
+All positive? 1
+Any even? 1
+None negative? 1
+Max = 9
+Min = 1
+10 7 6 6 3 2 
 Dave (20)
 Bob (25)
 Alice (30)
@@ -7,3 +17,5 @@ Dave (20)
 Carol (30)
 Bob (25)
 Alice (30)
+Oldest: Carol (30)
+People older than 25: 2
